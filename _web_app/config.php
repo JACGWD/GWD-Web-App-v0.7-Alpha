@@ -7,29 +7,26 @@ error_reporting(E_ALL);
 
 
 
-$graduatingStudentFolder = "demo-folder/";
+$graduatingStudentFolderNameName = "yourfirstname-lastname/";
 // firstname-lastname (all lowercase), with trailing slash
 
-$student = NULL;
+$graduatingStudentName = "John Smith";
 // When we need to print your name on a page, such as in the footer
 
 $theme = "default";
 // Set the folder name of your theme from _web_app/theme/. Call it whatever you like.
 // set your student folder & name above
 
-
-
-
-// *****************  TYPOGRAPHY **************** //
-
-$DefaultHeaderTitle = "John Abbott College";
-
 $Enable_Normalize = FALSE;
 	// By default, we use the simple-css-reset.css (based on Eric Meyer's reset v2.0).
 	// Default is FALSE.
 	// If you want to use Nicolas Gallagher's normalize.css (an industry standard, but less beginner-friendly) set to TRUE.
-// Set the DEFAULT text inside the <header> tag to your name. You can customize per page on each page. Add text inside quotation marks.
+  // Set the DEFAULT text inside the <header> tag to your name. You can customize per page on each page. Add text inside quotation marks.
 
+
+// *****************  HEADER TYPOGRAPHY CONTENTS **************** //
+
+$DefaultHeaderTitle = "John Abbott College";
 $DefaultHeaderSubtitle = "Graphic &amp; Web Design department";
 // Set the DEFAULT subtitle text inside the <header> tag. You can customize per page on each page.
 
@@ -37,20 +34,14 @@ $DefaultHeaderSubtitle = "Graphic &amp; Web Design department";
 // *****************  RESPONSIVE IMAGES **************** //
 
 
-$default_thumb_sizes = "(max-width: 64em) 100vw, (min-width: 64em) 45vw, (min-width: 100em) 30vw";
-// $default_thumb_sizes = "(max-width: 48em) 50vw, 20vw";
-// $default_thumb_sizes = "(max-width: 48em) 50vw, (max-width: 64em) 33vw, (max-width: 85.375em) 28.57vw, (max-width: 100em) 20.5vw, (min-width: 120em) 15vw";
-// $default_thumb_sizes = "(max-width: 64em) 100vw, (min-width: 64em) 45vw, (min-width: 100em) 30vw";
+$defaultSrcSetSizes = "(max-width: 64em) 100vw, (min-width: 64em) 45vw, (min-width: 100em) 30vw";
+// $defaultSrcSetSizes = "(max-width: 48em) 50vw, 20vw";
+// $defaultSrcSetSizes = "(max-width: 48em) 50vw, (max-width: 64em) 33vw, (max-width: 85.375em) 28.57vw, (max-width: 100em) 20.5vw, (min-width: 120em) 15vw";
+// $defaultSrcSetSizes = "(max-width: 64em) 100vw, (min-width: 64em) 45vw, (min-width: 100em) 30vw";
 // Set the DEFAULT size of your THUMBNAILS here.
 // The srcset sizes attribute uses media queries and "vm" units (percentages of the width of the viewport, ie entire screen).
 // Adjust values according to your design.
 
-
-$default_highres_sizes = "(max-width: 64em) 100vw, (min-width: 64em) 80vw, (min-width: 100em) 50vw";
-// $default_highres_sizes = "(max-width: 64em) 100vw, (min-width: 64em) 80vw, (min-width: 100em) 50vw";
-	// Set the DEFAULT size of your HIGH RESOLUTION images here
-	// The srcset sizes attribute uses media queries and "vm" units (percentages of the width of the viewport, ie entire screen).
-	// Adjust accordingly.
 
 
 
@@ -77,20 +68,23 @@ $TwitterHandle = "@jacgwd";
 
 $OgURL = getCurrentUrl();
 
-// $OgSiteName = 'PDHT 2015 graduate eportfolio | Work by '. $student;
+// $OgSiteName = 'PDHT 2015 graduate eportfolio | Work by '. $graduatingStudentName;
 $OgSiteName = NULL;
 
 
 
 // *************   EMAIL SECTION  *************** //
 
-	$mailto = 'ericg@johnabbott.qc.ca' ;
-	$subject = "Comment from eportfolio Visitor" ;
-	$formurl = "/contact.php" ;
-	$thankyouurl = "/contact/thank-you.php" ;
-	$errorurl = "/contact/error.php" ;
+$mailto = 'ericg@johnabbott.qc.ca' ;
+$subject = "Comment from eportfolio Visitor" ;
+$formurl = "/contact.php" ;
+$thankyouurl = "/contact/thank-you.php" ;
+$errorurl = "/contact/error.php" ;
 
-	// *************   END EMAIL SECTION  *************** //
+// *************   END EMAIL SECTION  *************** //
+
+
+
 
 
 // *************   END CONFIGURABLE SECTION  *************** //
@@ -103,7 +97,7 @@ $OgSiteName = NULL;
 
 // Set the paths to the folders
 
-//$MyPortfolio = $_SERVER["DOCUMENT_ROOT"].$currentGradsFolder. $graduatingStudentFolder ;
+//$MyPortfolio = $_SERVER["DOCUMENT_ROOT"].$currentGradsFolder. $graduatingStudentFolderName ;
 //$templates_folder = $MyPortfolio."_web_app/theme/" . $theme . "/templates/";
 //$includes_folder = $MyPortfolio."_web_app/theme/" . $theme . "/inc/";
 
@@ -113,19 +107,18 @@ $OgSiteName = NULL;
 // $rootHTMLFolder =  $_SERVER["DOCUMENT_ROOT"]."/content/html/";
 // $rootImgFolder = $_SERVER["DOCUMENT_ROOT"]."/content/img/";
 
-$rootTemplates_folder = "/home/pdhtorg/_web_app/themes/" . $theme . "/templates/";
-$rootIncludes_folder = "/home/pdhtorg/_web_app/themes/" . $theme . "/inc/";
-$rootHTMLFolder =  "/home/pdhtorg/www/graphicandwebdesign"."/content/html/";
-$rootImgFolder = "/home/pdhtorg/www/graphicandwebdesign"."/content/img/";
+$rootTemplates_folder = $_SERVER["DOCUMENT_ROOT"] . "/_web_app/themes/". $theme . "/templates/";
+$rootIncludes_folder = $_SERVER["DOCUMENT_ROOT"] . "/_web_app/themes/". $theme . "/inc/";
+$rootHTMLFolder =  $_SERVER["DOCUMENT_ROOT"] ."/content/html/";
+$rootImgFolder = $_SERVER["DOCUMENT_ROOT"] . "/content/img/";
 
 // $_SERVER["DOCUMENT_ROOT"] does not add the trailing slash, we add it here first
 // the PHP command $_SERVER["DOCUMENT_ROOT"] returns the server name, such as https://www.graphicandwebdesign.ca
 
-// $currentGradsFolder = $_SERVER["DOCUMENT_ROOT"]."/current-grads/";
-$currentGradsFolder = "/home/pdhtorg/www/graphicandwebdesign"."/current-grads/";
-$studentPortfolio = $currentGradsFolder . $graduatingStudentFolder;
-$studentHTMLFolder = $studentPortfolio ."content/html/";
-$studentImgFolder = $studentPortfolio ."content/img/";
+$currentGradsFolder = $_SERVER["DOCUMENT_ROOT"]."/current-grads/";
+$graduatingStudentNamePortfolio = $currentGradsFolder . $graduatingStudentFolderNameName;
+$graduatingStudentNameHTMLFolder = $graduatingStudentNamePortfolio ."content/html/";
+$graduatingStudentNameImgFolder = $graduatingStudentNamePortfolio ."content/img/";
 
 
 /**

@@ -29,7 +29,7 @@ foreach ( $thumbnails as $single_thumb ) {
 							   $thumb_folder. $single_thumb['thumb_image_2x'].", ". "\r\n".
 							   $thumb_folder. $single_thumb['thumb_image_3x']. "\"". "\r\n".
 							  'sizes="';
-							  if (isset($single_thumb['thumb_sizes'])) {echo " " . $single_thumb['thumb_sizes'];} else {echo $default_thumb_sizes;}
+							  if (isset($single_thumb['thumb_sizes'])) {echo " " . $single_thumb['thumb_sizes'];} else {echo $defaultSrcSetSizes;}
 							  echo "\"". "\r\n";
 							  echo
 							   "src=\"" .$thumb_folder. $single_thumb['thumb_image_default']. "\"".  "\r\n". " 

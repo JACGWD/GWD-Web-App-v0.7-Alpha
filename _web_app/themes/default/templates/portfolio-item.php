@@ -18,7 +18,7 @@
 
 
     alt="<?php echo($highres_alt); ?>"
-    sizes="<?php if (isset($custom_highres_sizes)) {echo $custom_highres_sizes;} else {echo $default_highres_sizes;} ?>" itemtype="http://schema.org/ImageObject">
+    sizes="<?php if (isset($custom_highres_sizes)) {echo $custom_highres_sizes;} else {echo $defaultSrcSetSizes;} ?>" itemtype="http://schema.org/ImageObject">
 
 	<figcaption class="highres-caption">
 	<?php

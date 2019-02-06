@@ -5,8 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<?php if (isset($canonical)) {echo '<link rel="canonical" "href="'. $canonical .'">' ."\r\n";} else {echo NULL;}
-”” />?>
+<?php if (isset($canonical)) {echo '<link rel="canonical" "href="'. $canonical .'">' ."\r\n";} else {echo NULL;} '/>' ?>
 
 <title><?php echo $title ?></title>
 <meta name="description" content="<?php echo $description ?>">
@@ -19,22 +18,22 @@
 
 <?php if ($Enable_Normalize == TRUE) {
 
-echo '<link rel="stylesheet" href="'.$currentGradsFolder . $graduatingStudentFolder  .'/_web_app/theme/'.$theme .'/css/simple-css-reset.css?v=2" media="all" />';
+echo '<link rel="stylesheet" href="'.'/_web_app/themes/'.$theme .'/css/simple-css-reset.css?v=2" media="all" />';
 }
-else {echo '<link rel="stylesheet" href="' . $currentGradsFolder . $graduatingStudentFolder  .'/_web_app/theme/'. $theme .'/css/normalize.css" media="all" />';
+else {echo '<link rel="stylesheet" href="' . '/_web_app/themes/'. $theme .'/css/normalize.css" media="all" />';
 }
 
 ?>
 
 
-<link rel="stylesheet" href="<?php echo $currentGradsFolder . $graduatingStudentFolder  ?>/_web_app/theme/<?php echo $theme ?>/css/style.css?v=2" media="all" />
+<link rel="stylesheet" href="/_web_app/themes/<?php echo $theme ?>/css/style.css?v=2" media="all" />
 
-<script src="<?php echo $currentGradsFolder . $graduatingStudentFolder  ?>/_web_app/theme/<?php echo $theme ?>/js/modernizr-3.6.0.min.js"></script>
+<script src="/_web_app/themes/<?php echo $theme ?>/js/modernizr-3.6.0.min.js"></script>
 
 
 <meta name="robots" content="noodp, noydir" />
 
-<meta property="author" content="<?php echo $student ?>">
+<meta property="author" content="John Abbott College Graphic & Web Design department">
 
 
 <?php
@@ -46,11 +45,9 @@ if (isset($itempropDescription)) {echo '<meta itemprop="description" content="'.
 
 if (isset($itempropImageURL)) {echo '<meta itemprop="image" content="' . $itempropImageURL .'">' ."\r\n";} else {echo NULL;}
 
-if (isset($GooglePlusProfile)) {echo '<link rel="author" href="https://plus.google.com/' . $GooglePlusProfile .'"/>' ."\r\n";} else {echo NULL;}
-
 echo "\r\n" . "<!-- Twitter -->" ."\r\n";
 
-// echo '<meta name="twitter:site" content="@pdht">' ."\r\n";
+// echo '<meta name="twitter:site" content="@jacgwd">' ."\r\n";
 
 if (isset($TwitterCardType)) {echo '<meta name="twitter:card" content="'. $TwitterCardType  .'"/>' ."\r\n";} else {echo '<meta name="twitter:card" content="summary" />'."\r\n";}
 
@@ -117,6 +114,6 @@ if (isset($ExtraHeaderCode)) {echo $ExtraHeaderCode ."\r\n";} else {echo NULL;}
 <?php require($rootIncludes_folder. "nav.php"); ?>
 
 <header<?php if (isset($HeaderClass)) {echo ' class="'. $HeaderClass .'"';} else {echo NULL;} ?>>
-<p class="headerTitle"><?php if (isset($HeaderTitle)) {echo $HeaderTitle;} else {echo $DefaultHeaderTitle;} ?></p>
-<p class="headerSubtitle"><?php if (isset($HeaderSubtitle)) {echo $HeaderSubtitle;} else {echo $DefaultHeaderSubtitle;} ?></p>
+<p class="headerTitle"><?php if (isset($customHeaderTitle)) {echo $customHeaderTitle;} else {echo $DefaultHeaderTitle;} ?></p>
+<p class="headerSubtitle"><?php if (isset($customHeaderSubtitle)) {echo $customHeaderSubtitle;} else {echo $DefaultHeaderSubtitle;} ?></p>
 </header>

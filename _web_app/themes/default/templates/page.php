@@ -1,5 +1,5 @@
 <?php
-require_once ($_SERVER["DOCUMENT_ROOT"])."/../../_web_app/config.php";
+$_SERVER["DOCUMENT_ROOT"]."/_web_app/config.php";
 
 require($rootIncludes_folder. "header.php"); ?>
 

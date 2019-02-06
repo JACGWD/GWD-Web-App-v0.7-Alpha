@@ -11,10 +11,10 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <!--
-<script src="<?php echo $currentGradsFolder.$graduatingStudentFolder  ?>_web_app/theme/<?php echo $theme ?>/js/picturefill.min.js"></script>
+<script src="<?php echo $currentGradsFolder.$graduatingStudentFolderName  ?>_web_app/theme/<?php echo $theme ?>/js/picturefill.min.js"></script>
 -->
 
-<script>window.jQuery || document.write('<script src="<?php echo $currentGradsFolder.$graduatingStudentFolder  ?>_web_app/theme/<?php echo $theme ?>/js/jquery-3.3.1.min.js"><\/script>')</script>
+<script>window.jQuery || document.write('<script src="<?php echo $currentGradsFolder.$graduatingStudentFolderName  ?>_web_app/theme/<?php echo $theme ?>/js/jquery-3.3.1.min.js"><\/script>')</script>
 
 <script type="text/javascript">
 	function NavShow(){

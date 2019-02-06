@@ -1,6 +1,6 @@
 <?php
 
-require ("/home/pdhtorg/_web_app/config.php");
+require ($_SERVER["DOCUMENT_ROOT"]."/_web_app/config.php");
 
 $redirectTo = "index.php";
 

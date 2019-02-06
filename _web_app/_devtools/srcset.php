@@ -1,5 +1,5 @@
 <?php
-require ("/home/pdhtorg/_web_app/config.php");
+require ($_SERVER["DOCUMENT_ROOT"]."/_web_app/config.php");
 
 // Set Image Properties here
 $default_highres_image = "al-sharif-al-hussein-bin-ali-mosque-sunrise-jordan-000032-447-2_600px";
@@ -16,15 +16,15 @@ $string = $default_highres_image;
 $pattern = '_600px';
 $replacement = NULL;
 $highres_image = str_replace($pattern, $replacement, $string);
-// $customSize= (if (isset($custom_highres_sizes)) {echo $custom_highres_sizes;} else {echo $default_highres_sizes;});
+// $customSize= (if (isset($custom_highres_sizes)) {echo $custom_highres_sizes;} else {echo $defaultSrcSetSizes;});
 
 // $customSize = 	($custom_highres_sizes == true) ? $custom_highres_sizes:
-//       			($default_highres_sizes == true) ? $default_highres_sizes:
-//       			$default_highres_sizes;
+//       			($defaultSrcSetSizes == true) ? $defaultSrcSetSizes:
+//       			$defaultSrcSetSizes;
 
 $customSize = 	($custom_highres_sizes == isset($custom_highres_sizes)) ? $custom_highres_sizes:
-      			($default_highres_sizes == true) ? $default_highres_sizes:
-     			$default_highres_sizes;
+      			($defaultSrcSetSizes == true) ? $defaultSrcSetSizes:
+     			$defaultSrcSetSizes;
 
 $highres_image_3x = $highres_image."_1800px.jpg";
 $highres_image_2x = $highres_image."_1200px.jpg";
