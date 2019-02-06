@@ -57,7 +57,8 @@ $Highlight_Menu_item = "contact";
 $h1 = "Contact the GWD department";
 $MainClass = "home";
 $raw_custom_sidebar = NULL;
-$mainContentFile = "contact.html";
+// $mainContentFile = "contact.html";
+$mainContentFile = "content-not-ready.html";
 
 // ----- FOOTER ---- //
 $ExtraFooterCode = NULL;

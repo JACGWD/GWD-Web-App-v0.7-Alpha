@@ -11,7 +11,7 @@
 
     <li><a href="/about.php" <?php if ($Highlight_Menu_item=="home") echo " class=\"currentpage\""; ?>>about</a>
     <ul>
-    <li><a href="/copyright-notice.php" <?php if ($Highlight_Menu_item=="about") echo " class=\"currentpage\""; ?>>copyright</a></li>
+
     <li><a href="/privacy-policy.php" <?php if ($Highlight_Menu_item=="about") echo " class=\"currentpage\""; ?>>privacy policy</a></li>
     </ul>
     </li>

@@ -116,7 +116,6 @@ main {background-color: #fff; padding: 1em; border: 1px solid #444; width:95%; m
 
 img {max-width: 100%; height: auto;}
 
-form > input, form > textarea, form > label {display: block; margin: 0 0 1em 0;}
 
 
 
@@ -153,7 +152,7 @@ form > input, form > textarea, form > label {display: block; margin: 0 0 1em 0;}
 
 /* ----  5. NAV ---- */
 
-
+ul.navigation {display: none;}
 
 
 /* Don't forget LoVeHA! Rule */
@@ -162,6 +161,7 @@ form > input, form > textarea, form > label {display: block; margin: 0 0 1em 0;}
 
 /* ----  6. Form ---- */
 
+form > input, form > textarea, form > label {display: block; margin: 0 0 1em 0;}
 
 
 
