@@ -32,7 +32,7 @@
         }
 
 		h1::before {
-			background-image: url(/_web_app/themes/default/css/style_images/shock.png);
+			background-image: url(/_web_app/themes/default/css/style_images/shock.jpg);
 			background-size: cover;
 			display: block;
 			height: 200px;
